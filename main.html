@@ -9,7 +9,7 @@
   <style>
     /* Custom styles for invalid feedback */
     .invalid-feedback {
-      display: block;
+      display: none;
     }
   </style>
 </head>
@@ -18,42 +18,42 @@
     <h2>Internship Application Form</h2>
     <form id="application-form">
       <div class="form-group">
-        <label for="first-name-input">First Name</label>
+        <label for="first-name-input" class="col-form-label">First Name</label>
         <input type="text" class="form-control" id="first-name-input" name="first_name" required>
         <div class="invalid-feedback">
           Please enter your first name.
         </div>
       </div>
       <div class="form-group">
-        <label for="last-name-input">Last Name</label>
+        <label for="last-name-input" class="col-form-label">Last Name</label>
         <input type="text" class="form-control" id="last-name-input" name="last_name" required>
         <div class="invalid-feedback">
           Please enter your last name.
         </div>
       </div>
       <div class="form-group">
-        <label for="email-input">Email</label>
+        <label for="email-input" class="col-form-label">Email</label>
         <input type="email" class="form-control" id="email-input" name="email" required>
         <div class="invalid-feedback">
           Please enter a valid email address.
         </div>
       </div>
       <div class="form-group">
-        <label for="college-input">College Name</label>
+        <label for="college-input" class="col-form-label">College Name</label>
         <input type="text" class="form-control" id="college-input" name="college_name" required>
         <div class="invalid-feedback">
           Please enter your college name.
         </div>
       </div>
       <div class="form-group">
-        <label for="roll-no-input">Roll No</label>
+        <label for="roll-no-input" class="col-form-label">Roll No</label>
         <input type="text" class="form-control" id="roll-no-input" name="roll_no" required>
         <div class="invalid-feedback">
           Please enter your roll number.
         </div>
       </div>
       <div class="form-group">
-        <label>Graduation Year</label>
+        <label for="graduation-year-input" class="col-form-label">Graduation Year</label>
         <select class="form-control" id="graduation-year-input" name="graduation_year" required>
           <option value="">Select Year</option>
           <option value="2020">2020</option>
@@ -80,5 +80,23 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Bootstrap form validation initialization
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 </body>
 </html>
