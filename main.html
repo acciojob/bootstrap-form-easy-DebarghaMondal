@@ -16,28 +16,33 @@
   <div class="col-md-4">
     <label for="first-name-input" class="form-label">First Name</label>
     <input type="text" class="form-control" id="first-name-input" value="" required>
-    <div class="valid-feedback">
-      Looks good!
+    <div class="invalid-feedback">
+      First name required!
     </div>
   </div>
   <div class="col-md-4">
     <label for="last-name-input" class="form-label">Last Name</label>
     <input type="text" class="form-control" id="last-name-input" value="" required>
-    <div class="valid-feedback">
-      Looks good!
+    <div class="invalid-feedback">
+      Last name required!
     </div>
   </div>
 	<div class="mb-3">
   <label for="email-input" class="form-label">Email Address</label>
   <input type="email" class="form-control" id="email-input" placeholder="name@example.com" required>
+		<div class="invalid-feedback">
+     Email required!
+    </div>
 </div>
 
 			 <div class="col-md-4">
     <label for="college-input" class="form-label">College</label>
     <input type="text" class="form-control" id="college-input" value="" required>
-    <div class="valid-feedback">
-      Looks good!
+    <div class="invalid-feedback">
+    Please provide a valid college.
     </div>
+			 </div>
+			<div>
 				 <label for="grad-year-select" class="form-label">Graduation Year</label>
 		<select class="form-select" id="grad-year-select" aria-label="Default select example" required>
 	  <option selected>Choose</option>
@@ -46,21 +51,19 @@
 	  <option value="3">2022</option>
 	  <option value="3">2023</option>
 	</select>
+				<div class="invalid-feedback">
+    Please select a valid Gradution year.
+    </div>
+			</div>
 				  <div class="col-md-4">
     <label for="roll-no-input" class="form-label">Roll No.</label>
     <input type="text" class="form-control" id="roll-no-input"  value="debu1" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
     <div class="invalid-feedback">
-      Please provide a valid city.
+      Please provide a valid Rollno..
     </div>
   </div>
+  </div>
+  
   <div class="col-md-3">
     <label for="validationCustom04" class="form-label">State</label>
     <select class="form-select" id="validationCustom04" required>
@@ -73,7 +76,9 @@
       <label class="form-check-label" for="conditions-checkbox">
         Agree to terms and conditions
       </label>
-     
+     <div class="invalid-feedback">
+    You must agree before submitting.
+    </div>
     </div>
   </div>
   <div class="col-12">
